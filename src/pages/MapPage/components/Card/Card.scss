@@ -1,0 +1,19 @@
+.card_green {
+  width: 140px;
+  padding: 10px;
+  display: block;
+
+  .card__image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../../scss/variables.scss';
+
+
+.MuiFormControl-root.search {
+
+  margin: 15px 0px;
+  min-width: calc(100% - 40px);
+  max-width: calc(100% - 40px);
+
+  label {
+    font-family: $general;
+    color: $text_gray;
+  }
+
+  @include desktop {
+    margin: 15px 0px;
+    min-width: 460px;
+    max-width: 460px;
+  }
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: $primary !important;
+}

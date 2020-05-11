@@ -1,0 +1,67 @@
+@import '../../../../scss/variables.scss';
+
+.card-result {
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  .card-result__title {
+    min-height: 24px;
+    width: 100%;
+    color: $black;
+    font-family: $general;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: inline;
+  }
+
+  .card-result__parf {
+    height: auto;
+    width: 100%;
+    opacity: 0.8;
+    color: $text_gray;
+    font-family: $general;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  .card-result__distance {
+    height: 12px;
+    width: 36px;
+    color: $text_gray;
+    font-family: $general;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.42px;
+    line-height: 12px;
+    margin-bottom: 22px;
+    margin-left: 10px;
+
+    svg {
+      margin-right: 2px;
+
+    }
+  }
+
+  .card-result__district {
+    font-size: 14px;
+    font-style: italic;
+    color: $text_gray;
+    font-weight: 300;
+  }
+
+  &.community {}
+
+  @include desktop {
+    .card-result__title {
+      width: 361px;
+
+    }
+  }
+
+}

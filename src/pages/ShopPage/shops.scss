@@ -1,0 +1,162 @@
+@import '../../scss/variables.scss';
+
+.shop__container {
+  padding: 90px 15px;
+  display: flex;
+  flex-direction: column;
+
+  .shop__row {
+    display: flex;
+    width: 100%;
+    margin: 0;
+
+    .column {
+      flex-basis: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 0 15px;
+      transition: flex-basis 1s ease-in;
+    }
+  }
+
+  .aside {
+    display: block;
+    position: fixed;
+    overflow-y: scroll;
+    top: 90px;
+    right: -100vw;
+    opacity: 0;
+    border-left: 1px solid $white-smoke;
+    padding: 20px;
+    height: 100vh;
+
+    &.open {
+      opacity: 1;
+      right: 0;
+
+      z-index: 100;
+      width: 100vw;
+      left: 0;
+    }
+
+    &.closed {
+      right: 0;
+      opacity: 0;
+      right: 0;
+    }
+  }
+
+  @include desktop {
+    padding: 50px 50px 50px 150px;
+
+    .shop__row {
+      margin-right: -15px;
+      margin-left: -15px;
+
+      .column {
+        flex-basis: 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0 15px;
+        transition: flex-basis 1s ease-in;
+      }
+
+      &.open {
+        width: 55%;
+        animation: fadeinBlockOne 1s ease-out normal;
+
+        .column {
+          flex-basis: 100%;
+        }
+      }
+
+      &.closed {
+        width: 100%;
+        animation: fadeoutBlockOne 1s ease-out normal;
+
+        .column {
+          flex-basis: 50%;
+
+        }
+      }
+    }
+
+    .aside {
+      display: none;
+      position: relative;
+      overflow: initial;
+      width: 0;
+      top: initial;
+      opacity: 0;
+      border-left: 1px solid $white-smoke;
+      padding: 50px;
+
+      &.open {
+        display: block;
+        height: 100vh;
+        overflow-y: auto;
+        right: 0;
+        left: initial;
+        top: 0;
+        position: fixed;
+        z-index: 10;
+        width: 40%;
+        opacity: 1;
+        animation: fadein 1s ease-in normal;
+      }
+
+      &.closed {
+        display: none;
+        width: 0;
+        opacity: 0;
+        animation: fadeout 1s ease-out normal;
+      }
+    }
+  }
+}
+
+@keyframes fadeinBlockOne {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 55%;
+  }
+}
+
+@keyframes fadeoutBlockOne {
+  0% {
+
+    width: 55%;
+  }
+
+  100% {
+
+    width: 100%;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 40%;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    width: 40%;
+  }
+
+  100% {
+    opacity: 0;
+    width: 0%;
+  }
+}

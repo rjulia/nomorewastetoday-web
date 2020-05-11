@@ -1,0 +1,86 @@
+{
+  "btns": {
+    "goback": "Go Back",
+    "viewmore": "View More"
+  },
+  "menu": {
+    "add": "add",
+    "home": "Home",
+    "shops": "Shops",
+    "contact": "contact",
+    "advice": "Advices"
+  },
+  "home": {
+    "title": "Nomorewaste.today",
+    "subtitle": "Select one of the Recycling Points below or find what you need to recycle",
+    "select": "What do you want to recycle",
+    "recyclingPoints": "Recycling Points",
+    "community": "Community Green Stations",
+    "organisations": "Recycling Organisations and Collection Points",
+    "clothes": "Clothes Recycling Bank",
+    "bin": "Waste Separation Bin",
+    "private": "Private Collector and Recycler",
+    "events": {
+      "title": "News & Events",
+      "all": "All",
+      "news": "News",
+      "events": "Events"
+    }
+  },
+  "shops": {
+    "title": "Shops",
+    "paraf": "Here you can find the Hong Kong stores where their philosophy and products are environmentally friendly.",
+    "qualification": "No More Waste Today Qualification",
+    "category": {
+      "home": "HOME",
+      "healthcare": "HEALTHCARE",
+      "food": "FOOD",
+      "catering": "CATERING",
+      "clothes": "CLOTHES",
+      "sports": "SPORTS",
+      "others": "OTHERS"
+    }
+
+  },
+  "contact": {
+    "title_contact": "Contact",
+    "phrase": "If you want to contact us you fill out the form below:",
+    "title_coffee": "Buy Me A Coffee",
+    "buyacoffee": "Hello, we are a couple of friends trying to help the people of Hong Kong to be more responsible when it comes to recycling. We do everything without any help, if you can help with the maintenance and expenses of the web, the planet will be deeply grateful for you. And we too, of course! :)",
+    "form": {
+      "name": "name",
+      "company": "Company",
+      "tel": "tel",
+      "email": "Email",
+      "type": "Type",
+      "message": "Message",
+      "required": "* These fields are required",
+      "submit": "SUBMIT",
+      "individual": "individual",
+      "ngo": "NGO",
+      "shop": "Shop"
+    }
+  },
+  "advice": {
+    "title": "Advices",
+    "paraf": "Here you can find how you can help to the envoiramnet and yourseft  to lefe in the better place."
+  },
+  "typeRecycling": {
+    "paper": "PAPER",
+    "computer_products": "COMPUTER PRODUCTS",
+    "used_ocooking_oil": "USED COOKING OIL",
+    "tonner_cartridege": "TONNER CARTRIDGE",
+    "metal": "METAL",
+    "plastic": "PLASTIC",
+    "ruber_tyre": "RUBER TYRE",
+    "elec_appliance": "ELECTRICAL APPLIANCE",
+    "rechargable_batterie": "RECHARGEABLE BATTERIES",
+    "flourescent": "FLOURESCENT",
+    "clothes": "CLOTHES",
+    "glass": "GLASS",
+    "furmiture": "FURNITURE",
+    "food": "FOOD",
+    "books": "BOOKS",
+    "others": "OTHERS"
+  }
+}

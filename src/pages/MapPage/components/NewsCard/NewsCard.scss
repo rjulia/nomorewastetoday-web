@@ -1,0 +1,61 @@
+@import '../../../../scss/variables.scss';
+
+.newscard {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 15px;
+
+  .news-card__image {
+
+    padding: 10px;
+    font-family: $general;
+
+    .news-card__frame {
+      overflow: hidden;
+      border-radius: 10px;
+      height: 100px;
+      width: 100px;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      width: 100%;
+      transform: scale(3);
+
+    }
+  }
+
+  .news-card__content {
+    padding: 10px;
+  }
+
+  .news-card__date {
+    color: $primary;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .news-card__title {
+    color: $black;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 4px 0 8px;
+    cursor: pointer;
+  }
+
+  .news-card__text {
+    color: $text_news_gray;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  @include desktop {}
+
+}

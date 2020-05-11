@@ -1,0 +1,148 @@
+@import '../../scss/variables.scss';
+
+.advice__container {
+  padding: 70px 15px 0;
+
+  .advice__box--images {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .frame-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        position: absolute;
+        content: "DONT USE THIS";
+        font-family: $general;
+        font-size: 80px;
+        color: $white;
+        opacity: 0.9;
+        text-shadow: 0 0 5px $black;
+      }
+
+      &.yes {
+        &::before {
+          content: "USE THIS";
+        }
+      }
+    }
+  }
+
+  .advice_pictures {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .advice__box--image {
+    width: calc(100vw - 30px);
+    margin: 0;
+  }
+
+  .advice__image--author {
+    color: $text_gray;
+    margin: 5px 20px 25px 20px;
+    font-weight: 300;
+    font-family: $outstanding;
+    font-size: 11px;
+    display: block;
+    text-align: right;
+
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .advice__box--date {
+    width: 90px;
+    border-radius: 20px;
+    padding: 5px;
+    border: 2px solid #e2e2e2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .advice__group--date {
+    background-color: rgba($color: $primary, $alpha: 0.7);
+    border-radius: 15px;
+    color: $white;
+
+    .advice__date--month,
+    .advice__date--year {
+      padding: 0;
+      font-size: 10;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-family: $outstanding;
+    }
+
+    .advice__date--day {
+      font-size: 35px;
+      border-top: 2px solid #e2e2e2;
+      border-bottom: 2px solid #e2e2e2;
+      background-color: $white;
+      color: $primary;
+      line-height: 35px;
+    }
+  }
+
+  .advice__statement {
+    font-weight: 600;
+    color: $text;
+    margin-bottom: 30px;
+    font-size: 20px;
+
+  }
+
+  .advice__author {
+    font-size: 12px;
+    color: $text_gray;
+    margin-bottom: 30px;
+
+  }
+
+  .advice__text {
+    width: 100%;
+    flex: 1 1 calc(100% - 400px);
+  }
+
+  .advice__long-text {
+    color: $text;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    p strong {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    img {
+      margin: 20px 0;
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    padding: 50px 50px 50px 150px;
+
+    .advice__box--images {
+      align-items: flex-end;
+    }
+
+    .advice_pictures {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .advice__box--image {
+      width: 400px;
+      margin: 0 30px 0 0;
+    }
+  }
+}

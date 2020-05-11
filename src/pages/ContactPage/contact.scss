@@ -1,0 +1,37 @@
+@import '../../scss/variables.scss';
+
+
+.contact__container {
+
+  padding: 90px 20px 20px;
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    color: $text_gray;
+    font-family: $outstanding;
+  }
+
+  .contact__paragraph {
+    margin-bottom: 0px;
+
+  }
+
+  .contact_title {
+    color: $primary;
+  }
+
+  .contact_buy-title {
+    color: $organitation;
+
+  }
+
+  @include desktop {
+    padding: 50px;
+    padding-left: 200px;
+
+    .contact__paragraph {
+      margin-bottom: 0px;
+    }
+  }
+}

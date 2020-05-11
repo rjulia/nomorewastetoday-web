@@ -1,0 +1,90 @@
+@import '../../../../scss/variables.scss';
+
+.collection-points {
+  padding: 20px 0;
+  width: calc(100vw - 15px);
+  overflow-x: hidden;
+
+  .collection-points--header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      letter-spacing: 0.8px;
+    }
+
+    .collection-points--points {
+      margin-right: $right-margin;
+
+      span {
+        height: 8px;
+        width: 8px;
+        cursor: pointer;
+        margin-left: 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 2px;
+
+        &.active {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+
+  .collection-points--body {
+    display: block;
+    overflow-x: hidden;
+    width: calc(100% - 20px);
+
+    .collection-points--card {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-left: 0;
+      animation: slide_reverse 1s;
+      cursor: pointer;
+
+      &.slided {
+        animation: slide 1s;
+        margin-left: -200px;
+
+      }
+    }
+  }
+
+  @include desktop {
+    padding: 20px 0;
+    width: 100%;
+
+    .collection-points--body {
+      display: block;
+      overflow-x: hidden;
+      width: 600px;
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: -200px;
+  }
+}
+
+@keyframes slide_reverse {
+  0% {
+    margin-left: -200px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}

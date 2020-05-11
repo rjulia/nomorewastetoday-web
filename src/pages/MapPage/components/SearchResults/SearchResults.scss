@@ -1,0 +1,52 @@
+@import '../../../../scss/variables.scss';
+
+.search-results {
+  padding-bottom: 50px;
+
+  .search-results__filter--box {
+    position: relative;
+    display: flex;
+
+  }
+
+  &.community {
+
+    .card-result .card-result__distance,
+    .dd-wrapper .dd-label {
+      color: $community;
+    }
+  }
+
+  &.waste {
+
+    .card-result .card-result__distance,
+    .dd-wrapper .dd-label {
+      color: $waste;
+    }
+  }
+
+  &.organization {
+
+    .card-result .card-result__distance,
+    .dd-wrapper .dd-label {
+      color: $organitation;
+    }
+  }
+
+  &.clothes {
+
+    .card-result .card-result__distance,
+    .dd-wrapper .dd-label {
+      color: $clothes;
+    }
+  }
+
+  &.private {
+
+    .card-result .card-result__distance,
+    .dd-wrapper .dd-label {
+      color: $private;
+    }
+  }
+
+}

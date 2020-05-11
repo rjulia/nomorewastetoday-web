@@ -1,0 +1,41 @@
+@import '../../scss/variables.scss';
+
+.form-contact__container {
+
+  .form__control {
+    width: 100%;
+    margin-top: 30px;
+    font-family: $outstanding;
+
+    &.text-area {
+      width: 100%;
+
+
+      #multiline {
+        min-height: 100px;
+      }
+    }
+
+    .MuiInput-input {
+      font-size: 14px;
+    }
+
+    .Mui-error {
+      font-size: 11px;
+    }
+  }
+
+
+  .btn__submint {
+    font-family: $outstanding;
+    padding: 10px 20px;
+    background: $primary;
+    border-radius: 20px;
+    color: $white;
+    font-family: $title_font;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}

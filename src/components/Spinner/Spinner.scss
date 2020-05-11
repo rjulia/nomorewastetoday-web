@@ -1,0 +1,43 @@
+@import '../../scss/variables';
+
+.spinner__container {
+  background-color: rgba($color: #fff, $alpha: 0.1);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.spinner__ring {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+}
+
+.spinner__ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid $primary;
+  border-color: $primary transparent $primary transparent;
+  animation: spinner__ring 1.2s linear infinite;
+}
+
+@include desktop {}
+
+@keyframes spinner__ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

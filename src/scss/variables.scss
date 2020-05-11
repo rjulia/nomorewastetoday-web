@@ -1,0 +1,65 @@
+// colors
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap');
+@import './mediaqueries';
+
+$primary: #94aa2a;
+$error: #E0521F;
+$white-smoke: rgb(226, 226, 226);
+$text_gray:#8D8D8D;
+$text_news_gray: #9A9A9A;
+$text_filter: #CECECE;
+
+$community: $primary;
+$organitation: #018383;
+$clothes: #fe9801;
+$waste: #D72C40;
+$private: #80367B;
+
+$hongkong: #E60202;
+$events: #2b580c;
+$hover: #801513;
+$text: #263E42;
+$white: #fff;
+$black: #222222;
+$right-margin: 26px;
+
+$title_font: 24px;
+$text_font: 14px;
+
+
+// Z-index
+$z-dropdwom: 10000;
+$z-menu: 1000;
+$z-menu-mobile: 100;
+$z-menu-mobile-open: 99;
+
+$bottomImg: -10;
+// font-family
+
+$general: 'Rubik',
+sans-serif;
+$outstanding: 'Raleway',
+sans-serif;
+
+:export {
+  primary: $primary;
+  error: $error;
+  smoke: $white-smoke;
+  text_gray: $text_gray;
+  text_news_gray: $text_news_gray;
+  text_filter: $text_filter;
+  community: $community;
+  clothes: $clothes;
+  waste: $waste;
+  organitation: $organitation;
+  private: $private;
+  hongkong: $hongkong;
+  events: $events;
+  hover: $hover;
+  text: $text;
+  white: $white;
+  black: $black;
+  general: $general;
+  outstanding: $outstanding;
+}

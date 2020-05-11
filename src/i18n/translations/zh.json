@@ -1,0 +1,85 @@
+{
+  "btns": {
+    "goback": "返回",
+    "viewmore": "更多"
+  },
+  "menu": {
+    "add": "加",
+    "home": "主頁",
+    "shops": "商店",
+    "contact": "聯絡我們",
+    "advice": "環保貼士"
+  },
+  "home": {
+    "title": "Nomorewaste.today",
+    "subtitle": "選擇以下其中一個回收點或你需要回收的物資",
+    "select": "你想回收甚麼物資",
+    "recyclingPoints": "回收點",
+    "community": "社區回收站",
+    "organisations": "回收機構及垃圾收集點",
+    "clothes": "衣物回收站",
+    "bin": "垃圾分類回收箱",
+    "private": "私人回收及垃圾收集商",
+    "events": {
+      "title": "最新消息及活動",
+      "all": "全部",
+      "news": "最新消息",
+      "events": "活動"
+    }
+  },
+  "shops": {
+    "title": "商店",
+    "paraf": "在此發現香港重視環保哲學及出售環保商品的商店",
+    "qualification": "No More Waste Today 認證",
+    "category": {
+      "home": "家品",
+      "healthcare": "健康用品",
+      "food": "食物",
+      "catering": "餐飲",
+      "clothes": "衣服",
+      "sports": "運動用品",
+      "others": "其他"
+    }
+  },
+  "contact": {
+    "title_contact": "聯絡我們",
+    "phrase": "填寫以下資料以便與你聯絡",
+    "title_coffee": "請我喝杯咖啡吧!",
+    "buyacoffee": "港人回收廢物，建立更美好的生活環境。我們沒接受任何幫助，希望你能資助此網頁的營運及開支，我們和我們的地球都會很感激你的。:)",
+    "form": {
+      "name": "姓名",
+      "company": "公司",
+      "tel": "電話",
+      "email": "電郵",
+      "type": "屬於",
+      "message": "訊息",
+      "required": "* 必需填寫",
+      "submit": "遞交",
+      "individual": "個人",
+      "ngo": "非政府組織",
+      "shop": "商店"
+    }
+  },
+  "advice": {
+    "title": "環保貼士",
+    "paraf": "在此發現你可如何保護環境，建立一個更美好的居住地方。"
+  },
+  "typeRecycling": {
+    "paper": "紙張",
+    "computer_products": "電腦",
+    "used_ocooking_oil": "食用油",
+    "tonner_cartridege": "碳粉盒",
+    "metal": "金屬",
+    "plastic": "塑膠",
+    "ruber_tyre": "車胎",
+    "elec_appliance": "電器",
+    "rechargable_batterie": "充電電池",
+    "flourescent": "光管",
+    "clothes": "衣服",
+    "glass": "玻璃",
+    "furmiture": "傢俬",
+    "food": "食物",
+    "books": "書本",
+    "others": "其他"
+  }
+}

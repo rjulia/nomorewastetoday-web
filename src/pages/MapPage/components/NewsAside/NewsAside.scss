@@ -1,0 +1,55 @@
+@import '../../../../scss/variables.scss';
+
+.news {
+  width: calc(100vw - 30px);
+
+  .news__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h2 {
+      letter-spacing: 0.8px;
+    }
+
+    .news__filter {
+      span {
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.6px;
+        color: $text_filter;
+        margin-left: 16px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &.active {
+          color: $primary;
+          font-weight: 500;
+        }
+      }
+    }
+
+  }
+
+  .news__body {
+    width: 100%;
+
+    .spinner__container {
+      width: calc(100vw - 40px);
+      height: 100px;
+    }
+  }
+
+  @include desktop {
+    width: 100%;
+
+    .news__body {
+      width: 426px;
+
+      .spinner__container {
+        width: 460px;
+        height: 290px;
+      }
+    }
+  }
+}

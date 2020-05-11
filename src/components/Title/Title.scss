@@ -1,0 +1,21 @@
+@import '../../scss/variables.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $general;
+  color: $black;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0.8px;
+}
+
+
+h1 {
+  border-bottom: 1px solid $primary;
+}

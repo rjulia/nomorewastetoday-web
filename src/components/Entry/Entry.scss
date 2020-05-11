@@ -1,0 +1,36 @@
+.entry {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .box__svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 5s linear forwards;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* Words , id for holder class, for its path  */
+    // svg>g>[id^=Stroke] {
+    //   stroke: #fff;
+    //   opacity: 0.2;
+    //   //stroke-dasharray: 600;
+    //   animation: yellow 3s cubic-bezier(0, 0.23, 1, .1);
+    //   animation-delay: 0s;
+    //   -moz-animation: yellow 3s cubic-bezier(0, 0.23, 1, .1);
+    //   -webkit-animation: yellow 3s cubic-bezier(0, 0.23, 1, .1);
+    // }
+  }
+}

@@ -1,0 +1,143 @@
+@import '../../scss/variables.scss';
+
+.ButtonMenu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 20px);
+  height: 74px;
+  cursor: pointer;
+  margin: 25px 0 25px 20px;
+
+  .icon__contianer {
+    width: 74px;
+    height: 64px;
+    padding: 5px 0 5px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &.bulb {
+    .icon__contianer {}
+  }
+
+  svg .stroke-1 {
+    //fill: $white;
+    stroke: $white;
+  }
+
+  span svg:first-child {
+    fill: $white;
+  }
+
+  svg:nth-child(2) {
+    display: none;
+  }
+
+
+  .icon__text {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: $general;
+    color: $white;
+    margin: 0 0 0 14px;
+    text-decoration: none;
+  }
+
+
+  &:hover,
+  .active & {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: $white;
+
+    .icon__text {
+      display: block;
+      color: $primary;
+
+    }
+
+    span svg {
+      fill: $primary;
+    }
+
+    svg:nth-child(2) {
+      position: absolute;
+      display: inline;
+      fill: $primary;
+      right: 32px;
+    }
+  }
+
+  @include desktop {
+
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 14px);
+    height: 80px;
+    margin: 20px 0 20px 14px;
+
+    .icon__contianer {
+      height: 60px;
+      padding: 5px 0;
+    }
+
+    .icon__text {
+
+      font-size: 10px;
+      font-weight: 300;
+      margin: 0 0 0 -15px;
+    }
+
+    &:hover,
+    .active & {
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      background-color: $white;
+
+      .icon__text {
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $white;
+        right: 0;
+        top: -20px;
+        height: 20px;
+        width: 20px;
+        mask-image: radial-gradient(circle 6px at 0 0, transparent 0, transparent 20px, black 20px);
+
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $white;
+        right: 0;
+        bottom: -20px;
+        height: 20px;
+        width: 20px;
+        mask-image: radial-gradient(circle 3px at 0 20px, transparent 0, transparent 20px, black 20px);
+
+      }
+
+      span svg {
+        fill: $primary;
+      }
+
+      svg:nth-child(2) {
+        position: relative;
+
+        right: initial;
+      }
+    }
+  }
+
+}
