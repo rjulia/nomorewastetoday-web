@@ -42,8 +42,6 @@ const NewsAside = ({ getEvents, getNewsInfo, t }) => {
     }
   };
 
-  console.log(results, filterResults);
-
   return (
     <div className="news">
       <div className="news__header">

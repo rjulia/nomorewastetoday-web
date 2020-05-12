@@ -26,12 +26,12 @@ const Contact = () => {
     <div className="contact__container">
       <div className="row">
         <div className="col-md-6 col-12">
-          <Title text={t('contact.title_contact')} classN={'contact_title'} />
-          <Paragraph tag="p" classN="contact__paragraph" text={t('contact.phrase')} />
+          <Title text={t('contact.title_contact')} variable={'contact_title'} />
+          <Paragraph tag="p" variable="contact__paragraph" text={t('contact.phrase')} />
           <FormContact />
         </div>
         <div className="col-md-6 col-12">
-          <Title classN={'contact_buy-title'} text={t('contact.title_coffee')} />
+          <Title variable={'contact_buy-title'} text={t('contact.title_coffee')} />
           <Paragraph tag="p" text={t('contact.buyacoffee')} />
           <WraperImage href="https://www.buymeacoffee.com/nomorewaste" target="_blank">
             <img

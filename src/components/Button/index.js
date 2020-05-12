@@ -41,11 +41,11 @@ const WrapperButtonBack = styled('div')`
   }
 `;
 
-const ButtonBack = ({ text, onClick, category }) => {
+const ButtonBack = ({ text, onClick, category, noArrow }) => {
   return (
     <WrapperButtonBack category={category} onClick={onClick}>
       <span>{text}</span>
-      <FaAngleRight color={handleColorType(category)} />
+      {!noArrow && <FaAngleRight color={handleColorType(category)} />}
     </WrapperButtonBack>
   );
 };
@@ -54,6 +54,7 @@ ButtonBack.propTypes = {
   text: PropTypes.string,
   onClick: PropTypes.func,
   category: PropTypes.string,
+  noArrow: PropTypes.bool,
 };
 
 export default ButtonBack;

@@ -45,11 +45,11 @@ const AdvicePage = ({ i18n }) => {
             sizeM={32}
           />
           <Paragraph
-            classN={'advice__statement'}
+            variable={'advice__statement'}
             text={language === 'en' ? advice.statement__en : advice.statement__zh}
           />
           <Paragraph
-            classN={'advice__author'}
+            variable={'advice__author'}
             text={`Author: ${advice.author}`}
             tag={'a'}
             href={advice.author}
@@ -57,9 +57,9 @@ const AdvicePage = ({ i18n }) => {
           <Title color={variables.primary} tag={'h2'} text={'Why do it?'} size={24} sizeM={30} />
           <div className="advice_pictures">
             <div className="advice__box--image">
-              <BoxImage classN={'frame-image'} img={advice.imageUrlWhy} height={200} />
+              <BoxImage variable={'frame-image'} img={advice.imageUrlWhy} height={200} />
               <Paragraph
-                classN={'advice__image--author'}
+                variable={'advice__image--author'}
                 text={`Autho: ${advice.authorWhy}`}
                 tag={'a'}
                 href={advice.linkWhy}
@@ -67,7 +67,7 @@ const AdvicePage = ({ i18n }) => {
             </div>
             <div className="advice__text">
               <Paragraph
-                classN={'advice__long-text'}
+                variable={'advice__long-text'}
                 text={language === 'en' ? advice.contentWhy__en.html : advice.contentWhy__zh.html}
               />
             </div>
@@ -81,9 +81,9 @@ const AdvicePage = ({ i18n }) => {
           />
           <div className="advice_pictures">
             <div className="advice__box--image">
-              <BoxImage classN={'frame-image yes'} img={advice.imageUrlWhat} height={200} />
+              <BoxImage variable={'frame-image yes'} img={advice.imageUrlWhat} height={200} />
               <Paragraph
-                classN={'advice__image--author'}
+                variable={'advice__image--author'}
                 text={`Autho: ${advice.authorWhat}`}
                 tag={'a'}
                 href={advice.linkWhat}
@@ -91,7 +91,7 @@ const AdvicePage = ({ i18n }) => {
             </div>
             <div className="advice__text">
               <Paragraph
-                classN={'advice__long-text'}
+                variable={'advice__long-text'}
                 text={language === 'en' ? advice.contentWhat__en.html : advice.contentWhat__zh.html}
               />
             </div>
@@ -104,7 +104,7 @@ const AdvicePage = ({ i18n }) => {
             sizeM={30}
           />
           <Paragraph
-            classN={'advice__long-text'}
+            variable={'advice__long-text'}
             text={language === 'en' ? advice.contentHow__en.html : advice.contentHow__zh.html}
           />
           <Title

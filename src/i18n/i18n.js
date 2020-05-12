@@ -1,15 +1,15 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 import zh from './translations/zh.json';
 import en from './translations/en.json';
 
 const resources = {
-  'en': {
-    translations: en
+  en: {
+    translations: en,
   },
-  'zh': {
-    translations: zh
-  }
+  zh: {
+    translations: zh,
+  },
 };
 
 i18n
@@ -17,7 +17,7 @@ i18n
   .init({
     // we init with resources
     resources: resources,
-    lng: "zh",
+    lng: 'en',
     keySeparator: '.',
     fallbackLng: ['en', 'zh'],
     // debug only when not in production

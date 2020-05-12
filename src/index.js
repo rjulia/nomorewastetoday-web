@@ -13,6 +13,7 @@ import store from './services/redux/store';
 import './index.scss';
 import App from './App';
 import GetCurrentPosition from './utils/GetCurrentPosition';
+import { CookiesProvider } from 'react-cookie';
 
 const link = new HttpLink({
   uri: process.env.REACT_APP_LINK_API || 'http://localhost:5000/graphql',
@@ -20,6 +21,8 @@ const link = new HttpLink({
 
 export const client = new ApolloClient({
   link: link,
+  name: 'nomorewastetoday-web-client',
+  version: '0.2',
   cache: new InMemoryCache({
     addTypename: true,
   }),
@@ -34,8 +37,10 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <Provider store={store}>
       <I18nextProvider i18n={i18n}>
-        <GetCurrentPosition />
-        <App />
+        <CookiesProvider>
+          <GetCurrentPosition />
+          <App />
+        </CookiesProvider>
       </I18nextProvider>
     </Provider>
   </ApolloProvider>,

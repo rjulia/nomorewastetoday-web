@@ -32,7 +32,7 @@ const Menu = () => {
           </ButtonMenu>
         </NavLink>
         <NavLink to="/advices">
-          <ButtonMenu text={t('menu.advice')} classN={'bulb'}>
+          <ButtonMenu text={t('menu.advice')} variable={'bulb'}>
             <AdviceIcon width="60px" style={{ transform: 'scale(0.7)' }} />
           </ButtonMenu>
         </NavLink>

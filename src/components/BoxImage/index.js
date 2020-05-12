@@ -23,9 +23,9 @@ const WrapperImage = styled.div`
   padding: 10px;
 `;
 
-const BoxImage = ({ img, height, classN }) => {
+const BoxImage = ({ img, height, variable }) => {
   return (
-    <WrapperImage className={classN}>
+    <WrapperImage className={variable}>
       <Content img={img} height={height} />
     </WrapperImage>
   );

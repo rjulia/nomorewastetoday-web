@@ -22,11 +22,11 @@ const NewsCard = ({ item, onGetEvent }) => {
   const TitleComponent = () =>
     item.__typename === 'Event' ? (
       <div onClick={() => onGetEvent(id)}>
-        <Title tag="h3" text={title} classN="news-card__title" />
+        <Title tag="h3" text={title} variable="news-card__title" />
       </div>
     ) : (
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <Title tag="h3" text={title} classN="news-card__title" />
+        <Title tag="h3" text={title} variable="news-card__title" />
       </a>
     );
   return (
@@ -38,7 +38,7 @@ const NewsCard = ({ item, onGetEvent }) => {
       </div>
       <div className="news-card__content">
         {date ? (
-          <Paragraph tag="span" text={moment(date).format('MM/DD/YY')} classN="news-card__date" />
+          <Paragraph tag="span" text={moment(date).format('MM/DD/YY')} variable="news-card__date" />
         ) : (
           ''
         )}
@@ -50,7 +50,7 @@ const NewsCard = ({ item, onGetEvent }) => {
           isTrucate={true}
           characters={isMobile() ? 80 : 100}
           text={description || content__zh || content__en}
-          classN="news-card__text"
+          variable="news-card__text"
         />
       </div>
     </div>

@@ -15,7 +15,7 @@ const CardResult = ({ item, getIdLocation, onGetLocation }) => {
         text={name}
         size={16}
         sizeM={16}
-        classN="card-result__title"
+        variable="card-result__title"
         onClick={() => {
           getIdLocation(item.id);
           onGetLocation({
@@ -29,7 +29,7 @@ const CardResult = ({ item, getIdLocation, onGetLocation }) => {
         {' '}
         - <span>{district}</span>
       </span>
-      <Paragraph text={address} tag="p" classN="card-result__parf" />
+      <Paragraph text={address} tag="p" variable="card-result__parf" />
       {item.dist && (
         <span className="card-result__distance">
           <FaMapMarkerAlt size="10" /> {item.dist}

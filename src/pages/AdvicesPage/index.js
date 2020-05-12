@@ -16,7 +16,7 @@ const Advices = () => {
     <div className="advice__container">
       <div className="advice__title">
         <Title tag={'h1'} text={t('advice.title')} size={48} color={variables.primary} />
-        <Paragraph tag="p" classN="contact__paragraph" text={t('advice.paraf')} />
+        <Paragraph tag="p" variable="contact__paragraph" text={t('advice.paraf')} />
       </div>
       <div className="row">
         {data.getAdvices.map((advice) => (

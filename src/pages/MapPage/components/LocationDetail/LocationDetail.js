@@ -32,21 +32,21 @@ const LocationDetail = ({ id }) => {
       )}
       <div className="location-detail__boxtext">
         <Paragraph
-          classN={`${location.category} location-detail__location`}
+          variable={`${location.category} location-detail__location`}
           text={location.category}
         />
         <Title tag="h2" text={location.name} />
-        <Paragraph classN="location-detail__description" text={location.content__en} />
-        <Paragraph classN="location-detail__address" text={location.address} />
+        <Paragraph variable="location-detail__description" text={location.content__en} />
+        <Paragraph variable="location-detail__address" text={location.address} />
         <Paragraph
           tag="a"
-          classN="location-detail__link-web"
+          variable="location-detail__link-web"
           href={location.webUrl || location.facebook}
           text={location.webUrl || location.facebook}
         />
         <Title
           tag="h3"
-          classN={`${location.category} location-detail__subtitle`}
+          variable={`${location.category} location-detail__subtitle`}
           text="What we recycle"
         />
         <ul className="location-detail__list">
@@ -59,12 +59,12 @@ const LocationDetail = ({ id }) => {
         </ul>
         <Title
           tag="h3"
-          classN={`${location.category} location-detail__subtitle `}
+          variable={`${location.category} location-detail__subtitle `}
           text="Contant Details"
         />
-        <Paragraph classN="location-detail__contact-name" text={location.conact_name} />
-        <Paragraph classN="location-detail__tel" text={location.tel} />
-        <Paragraph classN="location-detail__email" text={location.email} />
+        <Paragraph variable="location-detail__contact-name" text={location.conact_name} />
+        <Paragraph variable="location-detail__tel" text={location.tel} />
+        <Paragraph variable="location-detail__email" text={location.email} />
       </div>
     </div>
   );

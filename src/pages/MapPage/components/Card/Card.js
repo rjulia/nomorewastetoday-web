@@ -5,7 +5,7 @@ const Card = ({ children, text, onClick }) => {
   return (
     <div className="card_green" onClick={onClick}>
       <div className="card__image">{children}</div>
-      <Title tag="p" text={text} classN="card__text" />
+      <Title tag="p" text={text} variable="card__text" />
     </div>
   );
 };

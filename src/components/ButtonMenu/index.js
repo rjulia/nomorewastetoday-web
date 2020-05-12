@@ -3,10 +3,10 @@ import './ButtonMenu.scss';
 import { FaAngleRight } from 'react-icons/fa';
 import classNames from 'classnames';
 
-const Button = ({ children, onClick, text, classN }) => {
+const Button = ({ children, onClick, text, variable }) => {
   var btnClass = classNames({
     ButtonMenu: true,
-    [classN]: classN,
+    [variable]: variable,
   });
 
   return (

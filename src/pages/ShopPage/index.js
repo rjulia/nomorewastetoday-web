@@ -34,7 +34,7 @@ const ShopPage = () => {
     <div className="shop__container">
       <div className="shop__title">
         <Title tag={'h1'} text={t('shops.title')} size={48} color={variables.primary} />
-        <Paragraph tag="p" classN="contact__paragraph" text={t('shops.paraf')} />
+        <Paragraph tag="p" variable="contact__paragraph" text={t('shops.paraf')} />
       </div>
       <div className="row">
         <div className={!isOpen ? `row shop__row ${closed}` : 'row shop__row open'}>

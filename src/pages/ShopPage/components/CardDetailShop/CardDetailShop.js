@@ -96,7 +96,7 @@ const CardDetailShop = ({ id, onClose }) => {
       </div>
       <Title tag={'h2'} text={name} color={variables.primary} size={30} />
       <div>
-        <Paragraph text={t('shops.qualification')} classN={'card-shop__qualification'} />
+        <Paragraph text={t('shops.qualification')} variable={'card-shop__qualification'} />
         <p className="card-shop__start">
           {leafs.map((leaf) => (
             <FaLeaf

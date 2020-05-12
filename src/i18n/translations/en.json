@@ -1,7 +1,8 @@
 {
   "btns": {
     "goback": "Go Back",
-    "viewmore": "View More"
+    "viewmore": "View More",
+    "subscribe": "Subscribe"
   },
   "menu": {
     "add": "add",

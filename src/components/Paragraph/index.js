@@ -4,7 +4,7 @@ import { truncate } from '../../utils/functions';
 import variables from '../../scss/variables.scss';
 import styled from 'styled-components';
 
-const Paragraph = ({ text, tag, classN, isTrucate, characters, href, size = 16, children }) => {
+const Paragraph = ({ text, tag, variable, isTrucate, characters, href, size = 16, children }) => {
   let insertedText;
   const TagName = tag || 'p';
 
@@ -27,25 +27,25 @@ const Paragraph = ({ text, tag, classN, isTrucate, characters, href, size = 16, 
 
   if (href) {
     return (
-      <TagName className={classN} href={href} target="_blank" rel="noopener noreferrer">
+      <TagName className={variable} href={href} target="_blank" rel="noopener noreferrer">
         {insertedText}
       </TagName>
     );
   }
   if (children) {
     return (
-      <WrapperParagraph className={classN}>
+      <WrapperParagraph className={variable}>
         {children} {text}
       </WrapperParagraph>
     );
   }
-  return <WrapperParagraph className={classN} dangerouslySetInnerHTML={createMarkup()} />;
+  return <WrapperParagraph className={variable} dangerouslySetInnerHTML={createMarkup()} />;
 };
 
 Paragraph.propTypes = {
   text: PropTypes.string,
   tag: PropTypes.string,
-  classN: PropTypes.string,
+  variable: PropTypes.string,
   isTrucate: PropTypes.bool,
   characters: PropTypes.number,
   href: PropTypes.string,

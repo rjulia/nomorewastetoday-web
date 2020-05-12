@@ -1,7 +1,8 @@
 {
   "btns": {
     "goback": "返回",
-    "viewmore": "更多"
+    "viewmore": "更多",
+    "subscribe": "subscribe"
   },
   "menu": {
     "add": "加",
