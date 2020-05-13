@@ -26,8 +26,9 @@ function App(props) {
           <Route exact path="/advices/:id" component={Advice} />
           <Route exact path="/advices" component={Advices} />
           <Route exact path="/thankyou" component={ThankYou} />
+          <Route exact path="/404" component={NoMatch} />
           <Route path="*">
-            <NoMatch />
+            <Redirect to="/404" />
           </Route>
         </Switch>
       </Wrapper>
