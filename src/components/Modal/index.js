@@ -69,8 +69,8 @@ function ModalNMW() {
               status: data.addEmailCampaing.status,
             },
           ]);
-          setTimeout(() => closeModal(), 1000);
-          const expires = moment().add(1, 'day').toDate();
+          setTimeout(() => closeModal('done'), 1000);
+          const expires = moment().add(365, 'day').toDate();
           setCookie('cookie-subcription', 'agree', {
             path: '/',
             expires,
@@ -93,13 +93,15 @@ function ModalNMW() {
     console.log(cookies);
   }, []);
 
-  function closeModal() {
+  function closeModal(done) {
     setModalIsOpen(false);
-    const expires = moment().add(15, 'day').toDate();
-    setCookie('cookie-subcription', 'agree', {
-      path: '/',
-      expires,
-    });
+    if (!done) {
+      const expires = moment().add(1, 'day').toDate();
+      setCookie('cookie-subcription', 'agree', {
+        path: '/',
+        expires,
+      });
+    }
   }
 
   return (
