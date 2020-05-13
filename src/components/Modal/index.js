@@ -6,7 +6,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { BsX } from 'react-icons/bs';
 import { Input, InputLabel, FormControl, FormHelperText } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-import { Title, Paragraph, Button } from '..';
+import { Title, Paragraph } from '..';
 import { ADD_EMAIL } from '../../services/apollo/mutations';
 import Img from '../../assets/images/modal-subscribe.jpg';
 import './Modal.scss';
@@ -38,7 +38,7 @@ function ModalNMW() {
   const { t } = useTranslation();
   const { control, handleSubmit, errors } = useForm();
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
-  const [addEmail, { data }] = useMutation(ADD_EMAIL);
+  const [addEmail] = useMutation(ADD_EMAIL);
   const [message, setMessage] = useState([]);
   const [cookies, setCookie] = useCookies(['cookie-subcription']);
   const noCookieSubcription = _.isEmpty(_.get(cookies, 'cookie-subcription'));
@@ -90,12 +90,11 @@ function ModalNMW() {
       setModalIsOpen(false);
       console.log('bye');
     }
-    console.log(cookies);
   }, []);
 
   function closeModal(done) {
     setModalIsOpen(false);
-    if (!done) {
+    if (done !== 'done') {
       const expires = moment().add(1, 'day').toDate();
       setCookie('cookie-subcription', 'agree', {
         path: '/',

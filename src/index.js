@@ -12,7 +12,6 @@ import i18n from './i18n/i18n';
 import store from './services/redux/store';
 import './index.scss';
 import App from './App';
-import GetCurrentPosition from './utils/GetCurrentPosition';
 import { CookiesProvider } from 'react-cookie';
 
 const link = new HttpLink({
@@ -38,7 +37,6 @@ ReactDOM.render(
     <Provider store={store}>
       <I18nextProvider i18n={i18n}>
         <CookiesProvider>
-          <GetCurrentPosition />
           <App />
         </CookiesProvider>
       </I18nextProvider>

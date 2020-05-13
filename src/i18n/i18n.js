@@ -17,7 +17,7 @@ i18n
   .init({
     // we init with resources
     resources: resources,
-    lng: 'en',
+    lng: 'zh',
     keySeparator: '.',
     fallbackLng: ['en', 'zh'],
     // debug only when not in production

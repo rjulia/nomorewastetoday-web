@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-
-import { MapRecycle, Contact, Advices, Shop, Advice } from './pages';
+import { MapRecycle, Contact, Advices, Shop, Advice, ThankYou, NoMatch } from './pages';
 import './App.scss';
 import { Menu, MenuMobile } from './layout';
 import styled from 'styled-components';
@@ -26,6 +25,10 @@ function App(props) {
           <Route exact path="/shops" component={Shop} />
           <Route exact path="/advices/:id" component={Advice} />
           <Route exact path="/advices" component={Advices} />
+          <Route exact path="/thankyou" component={ThankYou} />
+          <Route path="*">
+            <NoMatch />
+          </Route>
         </Switch>
       </Wrapper>
       <MenuMobile />
