@@ -2,7 +2,12 @@
   "btns": {
     "goback": "返回",
     "viewmore": "更多",
-    "subscribe": "subscribe"
+    "subscribe": "Join us"
+  },
+  "modal": {
+    "text": "Subscribe and join an unstoppable community and stay updated about all you need to know about recycling in Hong Kong",
+    "error": "This member already exist, please insert another email",
+    "success": "Please check you email {{value}} for confirmation"
   },
   "menu": {
     "add": "加",

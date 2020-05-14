@@ -1,19 +1,20 @@
 @import '../../scss/variables.scss';
 
 .modal-subscriber__content {
-  display: flex;
-  flex-direction: column;
+  display: block;
   position: relative;
   width: 340px;
   min-width: 110px;
   max-width: 300px;
-  height: 450px;
+  height: 550px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   cursor: pointer;
   margin: 20px 0;
   text-align: center;
+
+
 
   .modal-subscriber__arrow {
     color: '#fff';
@@ -32,6 +33,7 @@
     font-size: 40px;
     text-align: center;
     color: $white;
+    line-height: 48px;
   }
 
   .modal-subscriber__box--btn {
@@ -49,7 +51,16 @@
 
   .form-contact__container {
     width: 100%;
-    margin-top: 125px;
+    margin-top: 55px;
+
+    .MuiFormLabel-root {
+      color: $primary;
+    }
+
+    .MuiInput-underline:after {
+      border-bottom-color: $primary;
+    }
+
   }
 
   .modal-subscriber__btn {

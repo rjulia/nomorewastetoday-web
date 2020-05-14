@@ -9,7 +9,7 @@ export { default as FormContact } from './FormContact';
 export { default as Label } from './Label';
 export { default as Map } from './Map/MapGoogleApi';
 export { default as MapGoogleApi } from './Map/MapGoogleApi';
-export { default as Modal } from './Modal';
+export { default as Modal } from './ModalSubcribe';
 
 export { default as Spinner } from './Spinner';
 export { default as Title } from './Title/Title';

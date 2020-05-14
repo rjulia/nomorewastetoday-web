@@ -29,7 +29,7 @@ const customStyles = {
     backgroundRepeat: 'no-repeat',
     backgroundOrigin: 'content-box',
     borderRadius: '20px',
-    backgroundPosition: '50% -450%',
+    backgroundPosition: '50% -650%',
     height: 490,
   },
 };
@@ -65,11 +65,13 @@ function ModalNMW() {
         } else {
           setMessage([
             {
-              message: `Please check you email ${data.addEmailCampaing.res} for confirmation`,
-              status: data.addEmailCampaing.status,
+              message: t('modal.success', {
+                value: _.get(data, 'addEmailCampaing.res'),
+              }),
+              status: _.get(data, 'addEmailCampaing.status'),
             },
           ]);
-          setTimeout(() => closeModal('done'), 1000);
+          setTimeout(() => closeModal('done'), 2500);
           const expires = moment().add(365, 'day').toDate();
           setCookie('cookie-subcription', 'agree', {
             path: '/',
@@ -84,11 +86,9 @@ function ModalNMW() {
 
   useEffect(() => {
     if (noCookieSubcription) {
-      console.log('hello');
       setModalIsOpen(true);
     } else {
       setModalIsOpen(false);
-      console.log('bye');
     }
   }, []);
 
@@ -115,11 +115,8 @@ function ModalNMW() {
         <span className={'modal-subscriber__arrow'} onClick={closeModal}>
           <BsX size={40} />
         </span>
-        <Title variable={'modal-subscriber__title'} tag={'h2'} text={'Join Us'} />
-        <Paragraph
-          variable={'modal-subscriber__text'}
-          text={'Subscripe our newslatter and get notifications to stya update'}
-        />
+        <Title variable={'modal-subscriber__title'} tag={'h2'} text={'NO MORE WASTE TODAY'} />
+        <Paragraph variable={'modal-subscriber__text'} text={t('modal.text')} />
         <form className="form-contact__container" onSubmit={handleSubmit(onSubmit)}>
           <FormControl className={'form__control'} error={Boolean(errors.name)}>
             <InputLabel htmlFor="name">{t('contact.form.email')} *</InputLabel>
