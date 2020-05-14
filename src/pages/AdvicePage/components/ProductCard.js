@@ -2,7 +2,6 @@ import React from 'react';
 import { BoxImage, Paragraph, Button } from '../../../components';
 
 const ProductCard = ({ product }) => {
-  console.log(product);
   return (
     <div className="col-4">
       <BoxImage variable={'frame-image yes'} img={product.imageUrl} height={300} />
