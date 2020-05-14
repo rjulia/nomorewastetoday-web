@@ -82,7 +82,7 @@ const FormContact = () => {
       <div className="row">
         <div className="col-md-4">
           <FormControl className={'form__control'}>
-            <InputLabel htmlFor="age-native-simple">T{t('contact.form.tel')}</InputLabel>
+            <InputLabel htmlFor="age-native-simple">{t('contact.form.tel')}</InputLabel>
             <Controller as={Input} name="phone" control={control} defaultValue="" />
           </FormControl>
         </div>

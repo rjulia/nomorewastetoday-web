@@ -56,7 +56,7 @@
     "form": {
       "name": "name",
       "company": "Company",
-      "tel": "tel",
+      "tel": "Tel",
       "email": "Email",
       "type": "Type",
       "message": "Message",
