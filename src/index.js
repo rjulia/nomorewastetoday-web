@@ -7,8 +7,6 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { Provider } from 'react-redux';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n';
-// import AppRouter from './router/AppRouter';
-// import { Entry } from "./components";
 import store from './services/redux/store';
 import './index.scss';
 import App from './App';
