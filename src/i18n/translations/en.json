@@ -65,10 +65,6 @@
       "individual": "individual",
       "ngo": "NGO",
       "shop": "Shop"
-    },
-    "message": {
-      "success": "Email successfully sent!",
-      "error": "Oh well, something was failed, sorry. Might you try later?"
     }
   },
   "advice": {

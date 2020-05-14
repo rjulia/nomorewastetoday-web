@@ -64,10 +64,6 @@
       "individual": "個人",
       "ngo": "非政府組織",
       "shop": "商店"
-    },
-    "message": {
-      "success": "Email successfully sent!",
-      "error": "Oh well, something was failed, sorry. Might you try later?"
     }
   },
   "advice": {

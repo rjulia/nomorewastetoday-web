@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import {
   Input,
@@ -15,18 +15,16 @@ import { useTranslation } from 'react-i18next';
 
 const FormContact = () => {
   const { t } = useTranslation();
-  const [message, setMessage] = useState('');
   function sendFeedback(templateId, variables) {
     window.emailjs
       .send('gmail', templateId, variables)
       .then((res) => {
-        setMessage(t('contact.message.success'));
+        console.log('Email successfully sent!');
       })
       // Handle errors here however you like, or use a React error boundary
-      .catch((err) => {
-        setMessage(t('contact.message.error'));
-        console.error(' that occured:', err.text);
-      });
+      .catch((err) =>
+        console.error('Oh well, you failed. Here some thoughts on the error that occured:', err)
+      );
   }
 
   const { control, handleSubmit, errors } = useForm();
@@ -136,7 +134,6 @@ const FormContact = () => {
       <button className="btn__submint" type="submit">
         {t('contact.form.submit')}
       </button>
-      {message && <span className="form-contact__message">{message}</span>}
     </form>
   );
 };
