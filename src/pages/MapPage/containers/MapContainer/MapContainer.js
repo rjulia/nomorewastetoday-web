@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { useQuery, useApolloClient } from '@apollo/react-hooks';
-import { MapGoogleApi, Spinner } from '../../../../components';
+import { useApolloClient } from '@apollo/react-hooks';
+import { MapGoogleApi } from '../../../../components';
 import { LOCATIONS_QUERY } from '../../../../services/apollo/queries';
 import { setLocations } from '../../../../services/redux/actions/search.actions';
 import './MapContianer.scss';
@@ -12,8 +12,7 @@ const MapContainer = ({ search, onGetLocations, coords }) => {
   //console.log(search);
   const [onLocations, setOnLocations] = useState([]);
   const client = useApolloClient();
-  async function handleClick(search) {
-    console.log('here', search);
+  async function getLocations(search) {
     const { data } = await client.query({
       query: LOCATIONS_QUERY,
       variables: search,
@@ -38,8 +37,7 @@ const MapContainer = ({ search, onGetLocations, coords }) => {
 
   useEffect(() => {
     if (!_.isEmpty(search)) {
-      console.log(search);
-      handleClick(search);
+      getLocations(search);
     }
     return () => {
       setOnLocations([]);

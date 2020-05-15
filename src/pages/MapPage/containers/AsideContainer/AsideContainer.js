@@ -20,7 +20,7 @@ const AsideContainer = ({ isOnSearching, id, id_event }) => {
   }, [id, id_event]);
   return (
     <div className="aside">
-      <Title color={variables.primary} size={28} tag={'h2'} text={t('home.title')} />
+      <Title color={variables.primary} size={28} tag={'h1'} text={t('home.title')} />
       <Paragraph tag="p" size={'12'} text={t('home.subtitle')} />
       <div className="aside__container">
         {!isDetailOpen && <Search />}

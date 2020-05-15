@@ -54,7 +54,11 @@ const Search = ({ onLoadLocationFiltered, isOnSearching }) => {
         value={material}
         onChange={handleChange}
         input={<Input />}
-        renderValue={(selected) => selected.join(', ')}
+        renderValue={(selected) => {
+          const sel = TypeRecycling.filter((type) => selected.includes(type.value));
+          const maping = sel.map((s) => t(s.key));
+          return maping.join(', ');
+        }}
         MenuProps={MenuProps}
       >
         {TypeRecycling.map((type) => (
