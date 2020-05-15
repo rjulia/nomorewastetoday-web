@@ -22,6 +22,7 @@ const NewsAside = ({ getEvents, getNewsInfo, t }) => {
   if (getEvents.getEvents && getNewsInfo.getNewsInfo) {
     filterResults = results = getEvents.getEvents.concat(getNewsInfo.getNewsInfo);
   }
+  console.log(getNewsInfo);
 
   useEffect(() => {
     setState(results);

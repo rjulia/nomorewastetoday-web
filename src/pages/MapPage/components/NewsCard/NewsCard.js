@@ -32,9 +32,13 @@ const NewsCard = ({ item, onGetEvent }) => {
   return (
     <div className="newscard">
       <div className="news-card__image">
-        <div className="news-card__frame">
-          <img src={urlToImage ? urlToImage : imageUrl ? imageUrl : Waste} alt={title} />
-        </div>
+        {item.__typename === 'Event' ? (
+          <div className="news-card__frame">
+            <img src={urlToImage ? urlToImage : imageUrl ? imageUrl : Waste} alt={title} />
+          </div>
+        ) : (
+          ''
+        )}
       </div>
       <div className="news-card__content">
         {date ? (
