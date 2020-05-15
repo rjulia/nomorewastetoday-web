@@ -1,6 +1,6 @@
 import {
   SEARCH_LOCATIONS,
-  SEARCH_GET_LOCATIONS,
+  SEARCH_SET_LOCATIONS,
   SEARCH_CLEAN_FILTER,
   SEARCH_CLEAN_LOCATIONS,
   SEARCH_CLEAN_LOCATION,
@@ -15,9 +15,9 @@ export const getLocationFiltered = (filter) => {
   };
 };
 
-export const getLocations = (locations) => {
+export const setLocations = (locations) => {
   return {
-    type: SEARCH_GET_LOCATIONS,
+    type: SEARCH_SET_LOCATIONS,
     payload: { locations: locations },
   };
 };

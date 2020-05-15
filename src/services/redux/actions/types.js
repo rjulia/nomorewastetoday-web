@@ -5,7 +5,7 @@ export const SETTINGS_CLEAN_POSITION = 'settings/clean position';
 
 export const SEARCH_LOCATIONS = 'search/filter locations';
 export const SEARCH_CLEAN_FILTER = 'search/clean filter';
-export const SEARCH_GET_LOCATIONS = 'search/get locations';
+export const SEARCH_SET_LOCATIONS = 'search/get locations';
 export const SEARCH_GET_LOCATION = 'search/get location';
 export const SEARCH_CLEAN_LOCATIONS = 'search/clean locations';
 export const SEARCH_CLEAN_LOCATION = 'search/clean location';

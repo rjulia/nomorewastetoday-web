@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { cleanFilter } from '../../../../services/redux/actions/search.actions';
+import { cleanFilter, cleanLocations } from '../../../../services/redux/actions/search.actions';
 import { SearchResults } from '../../components';
 import { ButtonBack } from '../../../../components';
 import { useTranslation } from 'react-i18next';
 
-const ResultsContainer = ({ onCleanLocationFiltered, locations, category }) => {
+const ResultsContainer = ({ onCleanLocationFiltered, onCleanLocations, locations, category }) => {
   const { t } = useTranslation();
   const [classCategory, setClassCategory] = useState('');
   const handelCloseFiltered = () => {
     onCleanLocationFiltered();
+    onCleanLocations();
   };
   function getCLassBycateory(category) {
     switch (true) {
@@ -45,6 +46,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   onCleanLocationFiltered: (params) => dispatch(cleanFilter(params)),
+  onCleanLocations: () => dispatch(cleanLocations()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsContainer);

@@ -1,6 +1,6 @@
 import {
   SEARCH_LOCATIONS,
-  SEARCH_GET_LOCATIONS,
+  SEARCH_SET_LOCATIONS,
   SEARCH_GET_LOCATION,
   SEARCH_CLEAN_FILTER,
   SEARCH_CLEAN_LOCATIONS,
@@ -30,7 +30,7 @@ export default function SearchReducers(state = InitialSettingsState, action) {
         },
       };
 
-    case SEARCH_GET_LOCATIONS:
+    case SEARCH_SET_LOCATIONS:
       return {
         ...state,
         locations: action.payload.locations,

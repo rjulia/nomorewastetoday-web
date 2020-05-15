@@ -12,7 +12,7 @@ import Pin from '../../assets/icons/pin.png';
 import { getLocation } from '../../services/redux/actions/search.actions';
 import { getPosition } from '../../services/redux/actions/settings.actions';
 
-const MapContainer = ({ data, settings, getIdLocation, onGetLocation, coordsShop }) => {
+const MapContainer = ({ data, settings, getIdLocation, onGetLocation, coordsShop, locations }) => {
   const { coords } = settings;
   let center = undefined;
   if (coordsShop) {
@@ -109,7 +109,8 @@ const MapContainer = ({ data, settings, getIdLocation, onGetLocation, coordsShop
           ]}
         >
           {(clusterer) =>
-            data.map((location, i) => {
+            locations &&
+            locations.map((location, i) => {
               return (
                 <Marker
                   key={i}
@@ -141,6 +142,7 @@ const MapContainer = ({ data, settings, getIdLocation, onGetLocation, coordsShop
 
 const mapStateToProps = (state) => ({
   settings: state.settings,
+  locations: state.searchs.locations,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -149,7 +151,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 MapContainer.propTypes = {
-  data: PropTypes.array,
   settings: PropTypes.object,
   getIdLocation: PropTypes.func,
   onGetLocation: PropTypes.func,

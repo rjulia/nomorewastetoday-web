@@ -1,32 +1,51 @@
 import _ from 'lodash';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery, useApolloClient } from '@apollo/react-hooks';
 import { MapGoogleApi, Spinner } from '../../../../components';
 import { LOCATIONS_QUERY } from '../../../../services/apollo/queries';
-import { getLocations } from '../../../../services/redux/actions/search.actions';
+import { setLocations } from '../../../../services/redux/actions/search.actions';
 import './MapContianer.scss';
 import { getDistances } from '../../../../utils/getDistance';
 
 const MapContainer = ({ search, onGetLocations, coords }) => {
-  const { data, loading, error } = useQuery(LOCATIONS_QUERY, { variables: search });
-  if (loading) return <Spinner className="spinner__map" />;
-  if (error) return <p>ERROR</p>;
-
-  const sortDataBydistance = data.getLocations
-    .map((location) => {
-      const dist = getDistances(coords.lat, coords.lng, location.lat, location.lng, 'K');
-      return {
-        ...location,
-        dist: _.round(dist, 2),
-      };
-    })
-    .sort(function (a, b) {
-      return a.dist - b.dist;
+  //console.log(search);
+  const [onLocations, setOnLocations] = useState([]);
+  const client = useApolloClient();
+  async function handleClick(search) {
+    console.log('here', search);
+    const { data } = await client.query({
+      query: LOCATIONS_QUERY,
+      variables: search,
     });
-  onGetLocations(sortDataBydistance);
+    setOnLocations(data.getLocations);
+  }
 
-  return <div className="map">{data && <MapGoogleApi data={sortDataBydistance} />}</div>;
+  function filterLocations(locations) {
+    return locations
+      .map((location) => {
+        const dist = getDistances(coords.lat, coords.lng, location.lat, location.lng, 'K');
+        return {
+          ...location,
+          dist: _.round(dist, 2),
+        };
+      })
+      .sort(function (a, b) {
+        return a.dist - b.dist;
+      });
+  }
+  onGetLocations(filterLocations(onLocations));
+
+  useEffect(() => {
+    if (!_.isEmpty(search)) {
+      console.log(search);
+      handleClick(search);
+    }
+    return () => {
+      setOnLocations([]);
+    };
+  }, [search]);
+  return <div className="map">{<MapGoogleApi />}</div>;
 };
 
 const mapStateToProps = (state) => {
@@ -37,7 +56,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onGetLocations: (params) => dispatch(getLocations(params)),
+  onGetLocations: (params) => dispatch(setLocations(params)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapContainer);
