@@ -34,7 +34,7 @@ const GetCurrentPosition = (props) => {
     <div></div>
   ) : (
     <Wrapper>
-      <p>Getting the location data&hellip;</p>
+      <p></p>
     </Wrapper>
   );
 };

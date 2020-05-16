@@ -46,7 +46,7 @@ const Contact = () => {
                 src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
                 alt="Buy Me A Coffee"
               />
-              <span>Buy my a Coffee</span>
+              <span>Buy me a Coffee</span>
             </WraperImage>
           </div>
         </div>
