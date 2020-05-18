@@ -6,13 +6,20 @@ import { LOCATION_QUERY } from '../../../../services/apollo/queries';
 import './locationDetail.scss';
 import { getImage } from '../../../../utils/getImageWhenNoImage';
 import { FaCheck } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import { TypeRecycling, TypeOfCollection } from '../../../../utils/constants';
 
 const LocationDetail = ({ id }) => {
+  const { t } = useTranslation();
   const { data, loading, error } = useQuery(LOCATION_QUERY, { variables: { id } });
   if (loading) return <Spinner className="spinner__map" />;
   if (error) return <p>ERROR</p>;
   const location = data.getLocation;
   const img = location.imageUrl || getImage(location.category);
+  console.log(location.recycleBy);
+  const typesColec = TypeRecycling.filter((type) => location.recycleBy.includes(type.value));
+  const catg = TypeOfCollection.filter((type) => location.category.includes(type.value));
+
   return (
     <div className="location-detail">
       <div className="location-detail__image">
@@ -33,7 +40,7 @@ const LocationDetail = ({ id }) => {
       <div className="location-detail__boxtext">
         <Paragraph
           variable={`${location.category} location-detail__location`}
-          text={location.category}
+          text={t(catg[0].key)}
         />
         <Title tag="h2" text={location.name} />
         <Paragraph variable="location-detail__description" text={location.content__en} />
@@ -47,20 +54,20 @@ const LocationDetail = ({ id }) => {
         <Title
           tag="h3"
           variable={`${location.category} location-detail__subtitle`}
-          text="What we recycle"
+          text={t('home.search.what')}
         />
         <ul className="location-detail__list">
-          {location.recycleBy.map((type) => (
-            <li key={type} className={`${location.category} location-detail__item`}>
-              <FaCheck size="12px" />
-              <Paragraph tag="span" text={type} />
+          {typesColec.map((type) => (
+            <li key={type.value} className={`${location.category} location-detail__item`}>
+              <FaCheck size="10px" />
+              <Paragraph tag="span" text={t(type.key)} size={12} />
             </li>
           ))}
         </ul>
         <Title
           tag="h3"
           variable={`${location.category} location-detail__subtitle `}
-          text="Contant Details"
+          text={t('home.search.details')}
         />
         <Paragraph variable="location-detail__contact-name" text={location.conact_name} />
         <Paragraph variable="location-detail__tel" text={location.tel} />

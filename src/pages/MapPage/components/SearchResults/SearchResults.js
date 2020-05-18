@@ -57,7 +57,7 @@ const SearchResults = ({
 
   return (
     <div className={`search-results ${classCategory}`}>
-      <Title tag="h2" text="Recycling Points" />
+      <Title tag="h2" text={t('home.search.title')} />
       <div className="search-results__filter--box">
         <DropdownSearchResults
           idx={0}
