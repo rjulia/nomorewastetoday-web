@@ -49,7 +49,7 @@ Paragraph.propTypes = {
   isTrucate: PropTypes.bool,
   characters: PropTypes.number,
   href: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.any,
   children: PropTypes.element,
 };
 

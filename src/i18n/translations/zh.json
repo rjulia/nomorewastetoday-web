@@ -34,39 +34,39 @@
       "events": "活動"
     },
     "search": {
-      "title": "Recycling Points",
-      "what": "What we recycle",
-      "details": "details",
+      "title": "回收點",
+      "what": "我們回收甚麼",
+      "details": "詳情",
       "type": {
-        "label": "Type",
-        "all": "All",
-        "community": "Community",
-        "collector": "Collector",
-        "organizations": "Organizations",
-        "clothes": "Clothes",
-        "waste_separation": "Waste Separation"
+        "label": "種類",
+        "all": "所有",
+        "community": "社區",
+        "collector": "收集商",
+        "organizations": "機構",
+        "clothes": "衣物",
+        "waste_separation": "垃圾分類"
       },
       "district": {
-        "label": "District",
-        "all": "All",
-        "central_western": "Central Western",
-        "wan_chai": "Wan Chai",
-        "eastern": "Eastern",
-        "southern": "Southern",
-        "yau_tsim_mong": "Yau Tsim Mong",
-        "sham_shui_po": "Sham Shui Po",
-        "kowloon_city": "Kowloon City",
-        "wong_tai_sin": "Wong Tai Sin",
-        "kwun_tong": "Kwun Tong",
-        "tsuen_wan": "Tsuen Wan",
-        "tuen_mun": "Tuen Mun",
-        "yuen_long": "Yuen Long",
-        "kwai_tsing": "Kwai Tsing",
-        "islands": "Islands",
-        "north": "North",
-        "tai_po": "Tai Po",
-        "sha_tin": "Sha Tin",
-        "sai_kung": "Sai Kung"
+        "label": "地區",
+        "all": "所有",
+        "central_western": "中西區",
+        "wan_chai": "灣仔",
+        "eastern": "東區",
+        "southern": "南區",
+        "yau_tsim_mong": "油尖旺",
+        "sham_shui_po": "深水埗",
+        "kowloon_city": "九龍城",
+        "wong_tai_sin": "黃大仙",
+        "kwun_tong": "觀塘",
+        "tsuen_wan": "荃灣",
+        "tuen_mun": "屯門",
+        "yuen_long": "元朗",
+        "kwai_tsing": "葵青",
+        "islands": "離島",
+        "north": "北區",
+        "tai_po": "大埔",
+        "sha_tin": "沙田",
+        "sai_kung": "西貢"
       }
     }
   },
@@ -103,8 +103,8 @@
       "shop": "商店"
     },
     "message": {
-      "success": "Email successfully sent!",
-      "error": "Oh well, something was failed, sorry. Might you try later?"
+      "success": "電郵已成功送出!",
+      "error": "抱歉，因有故障，請稍後再試"
     }
   },
   "advice": {
@@ -112,8 +112,8 @@
     "paraf": "在此發現你可如何保護環境，建立一個更美好的居住地方。"
   },
   "event": {
-    "title": "Events",
-    "paraf": "Here you can find all the events are happening in Hong Kong."
+    "title": "活動",
+    "paraf": "在此你可瀏覽香港所有的環保活動."
   },
   "typeRecycling": {
     "paper": "紙張",
