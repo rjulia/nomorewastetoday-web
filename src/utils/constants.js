@@ -67,7 +67,8 @@ export const TypeRecycling = [
 
 export const DistrictHK = [
   {
-    name: 'CENTRAL_WESTERN',
+    value: 'CENTRAL_WESTERN',
+    key: 'home.search.district.central_western',
     coords: {
       lat: 22.272457,
       lng: 114.1350874,
@@ -75,7 +76,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'WAN_CHAI',
+    value: 'WAN_CHAI',
+    key: 'home.search.district.wan_chai',
     coords: {
       lat: 22.2773399,
       lng: 114.1696255,
@@ -83,7 +85,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'EASTERN',
+    value: 'EASTERN',
+    key: 'home.search.district.eastern',
     coords: {
       lat: 22.2756251,
       lng: 114.2059835,
@@ -91,7 +94,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'SOUTHERN',
+    value: 'SOUTHERN',
+    key: 'home.search.district.southern',
     coords: {
       lat: 22.2394822,
       lng: 114.1537401,
@@ -99,7 +103,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'YAU_TSIM_MONG',
+    value: 'YAU_TSIM_MONG',
+    key: 'home.search.district.yau_tsim_mong',
     coords: {
       lat: 22.3099313,
       lng: 114.1588463,
@@ -107,7 +112,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'SHAM_SHUI_PO',
+    value: 'SHAM_SHUI_PO',
+    key: 'home.search.district.sham_shui_po',
     coords: {
       lat: 22.3312086,
       lng: 114.1316044,
@@ -115,7 +121,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'KOWLOON_CITY',
+    value: 'KOWLOON_CITY',
+    key: 'home.search.district.kowloon_city',
     coords: {
       lat: 22.3219416,
       lng: 114.1718194,
@@ -123,7 +130,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'WONG_TAI_SIN',
+    value: 'WONG_TAI_SIN',
+    key: 'home.search.district.wong_tai_sin',
     coords: {
       lat: 22.352454,
       lng: 114.1699113,
@@ -131,7 +139,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'KWUN_TONG',
+    value: 'KWUN_TONG',
+    key: 'home.search.district.kwun_tong',
     coords: {
       lat: 22.3104576,
       lng: 114.206132,
@@ -139,7 +148,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'TSUEN_WAN',
+    value: 'TSUEN_WAN',
+    key: 'home.search.district.tsuen_wan',
     coords: {
       lat: 22.3742318,
       lng: 114.070656,
@@ -147,7 +157,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'TUEN_MUN',
+    value: 'TUEN_MUN',
+    key: 'home.search.district.tuen_mun',
     coords: {
       lat: 22.3953899,
       lng: 113.9438816,
@@ -155,7 +166,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'YUEN_LONG',
+    value: 'YUEN_LONG',
+    key: 'home.search.district.yuen_long',
     coords: {
       lat: 22.4635133,
       lng: 113.9940111,
@@ -163,7 +175,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'KWAI_TSING',
+    value: 'KWAI_TSING',
+    key: 'home.search.district.kwai_tsing',
     coords: {
       lat: 22.3534126,
       lng: 114.0958334,
@@ -171,7 +184,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'ISLANDS',
+    value: 'ISLANDS',
+    key: 'home.search.district.islands',
     coords: {
       lat: 22.3544988,
       lng: 114.0001605,
@@ -179,7 +193,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'NORTH',
+    value: 'NORTH',
+    key: 'home.search.district.tai_po',
     coords: {
       lat: 22.5124188,
       lng: 114.1181291,
@@ -187,7 +202,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'TAI_PO',
+    value: 'TAI_PO',
+    key: 'home.search.district.sha_tin',
     coords: {
       lat: 22.2773399,
       lng: 114.1696255,
@@ -195,7 +211,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'SHA_TIN',
+    value: 'SHA_TIN',
+    key: 'home.search.district.sai_kung',
     coords: {
       lat: 22.2773399,
       lng: 114.1696255,
@@ -203,7 +220,8 @@ export const DistrictHK = [
     },
   },
   {
-    name: 'SAI_KUNG',
+    value: 'SAI_KUNG',
+    key: 'home.search.district.centrel',
     coords: {
       lat: 22.2773399,
       lng: 114.1696255,
@@ -213,9 +231,24 @@ export const DistrictHK = [
 ];
 
 export const TypeOfCollection = [
-  'COMMUNITY',
-  'COLLECTOR',
-  'ORGANIZATIONS',
-  'CLOTHES',
-  'WASTE_SEPARATION',
+  {
+    value: 'COMMUNITY',
+    key: 'home.search.type.community',
+  },
+  {
+    value: 'COLLECTOR',
+    key: 'home.search.type.collector',
+  },
+  {
+    value: 'ORGANIZATIONS',
+    key: 'home.search.type.organizations',
+  },
+  {
+    value: 'CLOTHES',
+    key: 'home.search.type.clothes',
+  },
+  {
+    value: 'WASTE_SEPARATION',
+    key: 'home.search.type.waste_separation',
+  },
 ];

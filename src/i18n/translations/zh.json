@@ -14,7 +14,8 @@
     "home": "主頁",
     "shops": "商店",
     "contact": "聯絡我們",
-    "advice": "環保貼士"
+    "advice": "環保貼士",
+    "event": "活動"
   },
   "home": {
     "title": "Nomorewaste.today",
@@ -31,6 +32,42 @@
       "all": "全部",
       "news": "最新消息",
       "events": "活動"
+    },
+    "search": {
+      "title": "Recycling Points",
+      "what": "What we recycle",
+      "details": "details",
+      "type": {
+        "label": "Type",
+        "all": "All",
+        "community": "Community",
+        "collector": "Collector",
+        "organizations": "Organizations",
+        "clothes": "Clothes",
+        "waste_separation": "Waste Separation"
+      },
+      "district": {
+        "label": "District",
+        "all": "All",
+        "central_western": "Central Western",
+        "wan_chai": "Wan Chai",
+        "eastern": "Eastern",
+        "southern": "Southern",
+        "yau_tsim_mong": "Yau Tsim Mong",
+        "sham_shui_po": "Sham Shui Po",
+        "kowloon_city": "Kowloon City",
+        "wong_tai_sin": "Wong Tai Sin",
+        "kwun_tong": "Kwun Tong",
+        "tsuen_wan": "Tsuen Wan",
+        "tuen_mun": "Tuen Mun",
+        "yuen_long": "Yuen Long",
+        "kwai_tsing": "Kwai Tsing",
+        "islands": "Islands",
+        "north": "North",
+        "tai_po": "Tai Po",
+        "sha_tin": "Sha Tin",
+        "sai_kung": "Sai Kung"
+      }
     }
   },
   "shops": {
@@ -73,6 +110,10 @@
   "advice": {
     "title": "環保貼士",
     "paraf": "在此發現你可如何保護環境，建立一個更美好的居住地方。"
+  },
+  "event": {
+    "title": "Events",
+    "paraf": "Here you can find all the events are happening in Hong Kong."
   },
   "typeRecycling": {
     "paper": "紙張",

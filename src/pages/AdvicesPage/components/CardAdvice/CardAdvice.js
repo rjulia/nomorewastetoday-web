@@ -4,18 +4,21 @@ import { Title, BoxImage } from '../../../../components';
 import { withTranslation } from 'react-i18next';
 import './CardAdvice.scss';
 
-const CardAdvice = ({ advice, i18n }) => {
+const CardAdvice = ({ data, i18n }) => {
   const { language } = i18n;
   return (
-    <Link to={`/advices/${advice.id}`}>
+    <Link to={`/advices/${data.id}`}>
       <div className="card-advice__container">
         <div className="card-advice__header">
-          <Title tag={'h2'} text={language === 'en' ? advice.title__en : advice.title__zh} />
+          <Title
+            tag={'h2'}
+            text={language === 'en' ? data.title__en || data.title : data.title__zh || data.title}
+          />
         </div>
         <div className="card-advice__content">
           <div className="card-advice__box--image">
-            <BoxImage img={advice.imageUrlWhat} height={200} />
-            <p className="card-advice__author"> Author: {advice.authorWhat}</p>
+            <BoxImage img={data.imageUrlWhat || data.imageUrl} height={200} />
+            <p className="card-advice__author"> Author: {data.authorWhat}</p>
           </div>
         </div>
       </div>
