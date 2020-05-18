@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 import './DropdownSearchResults.scss';
+import { useTranslation } from 'react-i18next';
 
 const DropdownSearchResults = (props) => {
   const { list, toggleItem, selectTitle, idx, toggleList, idxActived, title } = props;
   const [isOpen, setIsOpen] = useState(false);
-
+  const { t } = useTranslation();
   useEffect(() => {
     if (idx === idxActived) {
       setIsOpen((isOpen) => !isOpen);
@@ -18,7 +19,7 @@ const DropdownSearchResults = (props) => {
     <div className="dd-wrapper">
       <span className="dd-label">{title}</span>
       <div className="dd-header" onClick={() => toggleList(idx)}>
-        <div className="dd-header-title">{selectTitle || 'ALL'}</div>
+        <div className="dd-header-title">{t(selectTitle)}</div>
         {isOpen ? <FaAngleUp size="10" /> : <FaAngleDown size="10" />}
       </div>
       {isOpen && (
@@ -30,18 +31,18 @@ const DropdownSearchResults = (props) => {
               toggleList(idx);
             }}
           >
-            ALL
+            {t('home.search.type.all')}
           </li>
-          {list.map((item, id) => (
+          {list.map((item) => (
             <li
               className="dd-list-item"
-              key={id}
+              key={item.value}
               onClick={() => {
                 toggleItem(item);
                 toggleList(idx);
               }}
             >
-              {item.name || item}
+              {t(item.key)}
             </li>
           ))}
         </ul>

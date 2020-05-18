@@ -14,7 +14,8 @@
     "home": "Home",
     "shops": "Shops",
     "contact": "contact",
-    "advice": "Advices"
+    "advice": "Advices",
+    "event": "Events"
   },
   "home": {
     "title": "Nomorewaste.today",
@@ -31,6 +32,42 @@
       "all": "All",
       "news": "News",
       "events": "Events"
+    },
+    "search": {
+      "title": "Recycling Points",
+      "what": "What we recycle",
+      "details": "details",
+      "type": {
+        "label": "Type",
+        "all": "All",
+        "community": "Community",
+        "collector": "Collector",
+        "organizations": "Organizations",
+        "clothes": "Clothes",
+        "waste_separation": "Waste Separation"
+      },
+      "district": {
+        "label": "District",
+        "all": "All",
+        "central_western": "Central Western",
+        "wan_chai": "Wan Chai",
+        "eastern": "Eastern",
+        "southern": "Southern",
+        "yau_tsim_mong": "Yau Tsim Mong",
+        "sham_shui_po": "Sham Shui Po",
+        "kowloon_city": "Kowloon City",
+        "wong_tai_sin": "Wong Tai Sin",
+        "kwun_tong": "Kwun Tong",
+        "tsuen_wan": "Tsuen Wan",
+        "tuen_mun": "Tuen Mun",
+        "yuen_long": "Yuen Long",
+        "kwai_tsing": "Kwai Tsing",
+        "islands": "Islands",
+        "north": "North",
+        "tai_po": "Tai Po",
+        "sha_tin": "Sha Tin",
+        "sai_kung": "Sai Kung"
+      }
     }
   },
   "shops": {
@@ -74,6 +111,10 @@
   "advice": {
     "title": "Advices",
     "paraf": "Here you can find how you can help to the envoiramnet and yourseft  to lefe in the better place."
+  },
+  "event": {
+    "title": "Events",
+    "paraf": "Here you can find all the events are happening in Hong Kong."
   },
   "typeRecycling": {
     "paper": "PAPER",

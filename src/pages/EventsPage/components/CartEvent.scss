@@ -1,0 +1,127 @@
+@import '../../../scss/variables.scss';
+
+.card-event__container {
+  display: flex;
+  padding: 0;
+  border-bottom: 1px solid $white-smoke;
+  margin-bottom: 20px;
+  flex-direction: column;
+  height: 100%;
+
+
+  h2 {
+    font-size: $general;
+    font-size: 24px;
+    color: $primary;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  p {
+    font-family: $outstanding;
+    font-weight: 300;
+    color: $text_gray;
+  }
+
+  .card-event__content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .cart-event__details {
+    display: flex;
+
+    p {
+      font-size: 12px;
+      font-family: $outstanding;
+      letter-spacing: 1px;
+      margin-right: 25px;
+      margin-bottom: 15px;
+
+      span {
+        margin-right: 5px;
+        background-color: $white-smoke;
+        padding: 4px 8px;
+        border-radius: 20px;
+      }
+
+      &:last-child {
+        span {
+          background-color: initial;
+          padding: 0;
+        }
+      }
+    }
+
+  }
+
+  .card-event__box--image {
+    position: relative;
+    flex: 1 1 100%;
+    text-align: center;
+    margin-right: 20px;
+
+    .card-event__author {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: $white;
+      font-size: 11px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "YES";
+      top: 50%;
+      transform: translateY(-50%);
+      color: $white;
+      text-align: center;
+      font-size: 80px;
+      opacity: 0.7;
+    }
+
+    &.no {
+      &::before {
+
+        content: "NO";
+
+      }
+    }
+
+  }
+
+  .card-event__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-event__box--text {
+    padding: 10px 10px 20px 20px;
+    display: flex;
+    flex: 1 1 calc(100% - 294px);
+    flex-direction: column;
+
+    .card-event__statement {
+      font-weight: 600;
+
+    }
+  }
+
+  @include desktop {
+    padding: 20px 20px 0;
+
+    .card-event__content {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+    }
+
+    .card-event__box--image {
+      flex: 1 1 600px;
+      cursor: pointer;
+
+    }
+  }
+}
