@@ -81,7 +81,10 @@
       "catering": "餐飲",
       "clothes": "衣服",
       "sports": "運動用品",
-      "others": "其他"
+      "others": "其他",
+      "baby": "嬰兒用品",
+      "cleaning": "清潔用品",
+      "cosmetics": "化粧品"
     }
   },
   "contact": {

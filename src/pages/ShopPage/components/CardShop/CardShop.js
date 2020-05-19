@@ -33,6 +33,12 @@ const CardShop = ({ shop, open, isOpen }) => {
         return t('shops.category.sports');
       case value === 'OTHERS':
         return t('shops.category.others');
+      case value === 'BABY':
+        return t('shops.category.baby');
+      case value === 'CLEANING':
+        return t('shops.category.cleaning');
+      case value === 'COSMETICS':
+        return t('shops.category.cosmetics');
       default:
         break;
     }

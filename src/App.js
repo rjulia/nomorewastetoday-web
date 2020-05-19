@@ -1,6 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { MapRecycle, Contact, Advices, Shop, Advice, ThankYou, NoMatch, Events } from './pages';
+import {
+  MapRecycle,
+  Contact,
+  Advices,
+  Shop,
+  Advice,
+  ThankYou,
+  NoMatch,
+  Events,
+  Event,
+} from './pages';
 import './App.scss';
 import { Menu, MenuMobile } from './layout';
 import styled from 'styled-components';
@@ -25,6 +35,7 @@ function App(props) {
           <Route exact path="/shops" component={Shop} />
           <Route exact path="/advices/:id" component={Advice} />
           <Route exact path="/advices" component={Advices} />
+          <Route exact path="/events/:id" component={Event} />
           <Route exact path="/events" component={Events} />
           <Route exact path="/thankyou" component={ThankYou} />
           <Route exact path="/404" component={NoMatch} />
