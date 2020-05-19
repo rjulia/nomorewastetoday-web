@@ -81,7 +81,10 @@
       "catering": "CATERING",
       "clothes": "CLOTHES",
       "sports": "SPORTS",
-      "others": "OTHERS"
+      "others": "OTHERS",
+      "baby": "BABY",
+      "cleaning": "CLEANING",
+      "cosmetics": "COSMETICS"
     }
 
   },

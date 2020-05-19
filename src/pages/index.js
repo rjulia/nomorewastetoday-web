@@ -3,6 +3,7 @@ export { default as Advices } from './AdvicesPage';
 export { default as Advice } from './AdvicePage';
 export { default as Contact } from './ContactPage';
 export { default as Events } from './EventsPage';
+export { default as Event } from './EventPage';
 export { default as MapRecycle } from './MapPage';
 export { default as NoMatch } from './NoMatchPage';
 export { default as Shop } from './ShopPage';
