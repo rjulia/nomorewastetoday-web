@@ -26,9 +26,6 @@ import { IoIosGlobe } from 'react-icons/io';
 const CardDetailShop = ({ id, onClose }) => {
   const leafs = [0, 1, 2, 3, 4];
   const { t } = useTranslation();
-  const { data, loading, error } = useQuery(SHOP_QUERY, { variables: { id } });
-  if (loading) return <Spinner className="spinner__map" />;
-  if (error) return <p>ERROR</p>;
   function translationCatagoery(value) {
     switch (true) {
       case value === 'HOME':
@@ -45,10 +42,19 @@ const CardDetailShop = ({ id, onClose }) => {
         return t('shops.category.sports');
       case value === 'OTHERS':
         return t('shops.category.others');
+      case value === 'BABY':
+        return t('shops.category.baby');
+      case value === 'CLEANING':
+        return t('shops.category.cleaning');
+      case value === 'COSMETICS':
+        return t('shops.category.cosmetics');
       default:
         break;
     }
   }
+  const { data, loading, error } = useQuery(SHOP_QUERY, { variables: { id } });
+  if (loading) return <Spinner className="spinner__map" />;
+  if (error) return <p>ERROR</p>;
   const {
     address,
     category,
