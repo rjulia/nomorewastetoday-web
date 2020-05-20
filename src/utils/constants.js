@@ -194,7 +194,7 @@ export const DistrictHK = [
   },
   {
     value: 'NORTH',
-    key: 'home.search.district.tai_po',
+    key: 'home.search.district.north',
     coords: {
       lat: 22.5124188,
       lng: 114.1181291,
@@ -203,7 +203,7 @@ export const DistrictHK = [
   },
   {
     value: 'TAI_PO',
-    key: 'home.search.district.sha_tin',
+    key: 'home.search.district.tai_po',
     coords: {
       lat: 22.2773399,
       lng: 114.1696255,
@@ -212,7 +212,7 @@ export const DistrictHK = [
   },
   {
     value: 'SHA_TIN',
-    key: 'home.search.district.sai_kung',
+    key: 'home.search.district.sha_tin',
     coords: {
       lat: 22.2773399,
       lng: 114.1696255,
@@ -221,7 +221,7 @@ export const DistrictHK = [
   },
   {
     value: 'SAI_KUNG',
-    key: 'home.search.district.centrel',
+    key: 'home.search.district.sai_kung',
     coords: {
       lat: 22.2773399,
       lng: 114.1696255,
